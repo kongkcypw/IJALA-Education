@@ -6,18 +6,24 @@ using UnityEngine.UI;
 public class GameControl : MonoBehaviour
 {
     GameObject token;
-    List<int> faceIndexes = new List<int> { 0, 1, 2, 3, 0, 1, 2, 3 };
+    List<int> faceIndexes = new List<int> { 0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5 };
     public static System.Random rnd = new System.Random();
     public int shuffleNum = 0;
     int[] visibleFaces = { -1, -2 };
+
+    private void Awake()
+    {
+        token = GameObject.Find("Card");
+    }
 
     void Start()
     {
 
         int originalLength = faceIndexes.Count;
-        float yPosition = 89f;
-        float xPosition = 57f;
-        for (int i = 0; i < 7; i++)
+        float yPosition = 125f;
+        float xPosition = 0f;
+
+        for (int i = 0; i < 11 ; i++)
         {
             shuffleNum = rnd.Next(0, (faceIndexes.Count));
 
@@ -25,16 +31,20 @@ public class GameControl : MonoBehaviour
                 xPosition, yPosition, -20),
                 Quaternion.identity);
             temp.GetComponent<MainToken>().faceIndex = faceIndexes[shuffleNum];
-            temp.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
+            temp.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false); // set temp in canva scale
 
             faceIndexes.Remove(faceIndexes[shuffleNum]);
-            xPosition = xPosition + 109;
 
-            if (i % 2 == 0)
+            if ( i == 1 || i == 4 || i== 7 )
             {
-                xPosition = -52f;
-                yPosition = yPosition - 60f;
+                xPosition = -102f;
+                yPosition = yPosition - 115f;
             }
+            else
+            {
+                xPosition = xPosition + 102;
+            }
+
         }
         token.GetComponent<MainToken>().faceIndex = faceIndexes[0];
     }
@@ -86,9 +96,5 @@ public class GameControl : MonoBehaviour
         return success;
     }
 
-    private void Awake()
-    {
-        token = GameObject.Find("Token");
-    }
 
 }

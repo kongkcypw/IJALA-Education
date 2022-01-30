@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class McScore : MonoBehaviour
 {
-    public GameObject LastScoreObj;
-    public Text LastScoreText;
 
     public GameObject ScoreObj;
-    public Text scoreText;
+    public TextMeshProUGUI scoreText;
     private int Score = 0;
 
     Manager manage;
@@ -24,9 +23,7 @@ public class McScore : MonoBehaviour
     {
         if(manage.EndCheck == true)
         {
-            LastScoreText.text = "Score " + Score.ToString();
-            ScoreObj.SetActive(false);
-            LastScoreObj.SetActive(true);
+            // Show total Score
         }
     }
 
