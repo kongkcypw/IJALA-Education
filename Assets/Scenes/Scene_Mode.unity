@@ -742,7 +742,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 450817354}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 465149258}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: EditProfile
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &450817354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1319,7 +1331,7 @@ GameObject:
   - component: {fileID: 1239520351}
   - component: {fileID: 1239520354}
   m_Layer: 5
-  m_Name: mode (2)
+  m_Name: Memory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1437,7 +1449,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1239520352}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 465149258}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Scence_Mem
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1584732933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,7 +1963,7 @@ GameObject:
   - component: {fileID: 1917277176}
   - component: {fileID: 1917277179}
   m_Layer: 5
-  m_Name: mode (1)
+  m_Name: Multiple Choices
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2057,7 +2081,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1917277177}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 465149258}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Scence_MC
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2029163914
 GameObject:
   m_ObjectHideFlags: 0
@@ -2072,7 +2108,7 @@ GameObject:
   - component: {fileID: 2029163916}
   - component: {fileID: 2029163919}
   m_Layer: 5
-  m_Name: mode
+  m_Name: Match Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2190,7 +2226,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2029163917}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 465149258}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Scence_MU
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2070276429
 GameObject:
   m_ObjectHideFlags: 0
