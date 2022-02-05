@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class MemScore : MonoBehaviour
 {
-    public Text scoreText;
+    public TextMeshProUGUI scoreText;
     public int Score = 0;
 
     public void AddScore()

@@ -19,6 +19,7 @@ public class SendToGoogle : MonoBehaviour
     [SerializeField]
     private string BASE_URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdMLOqrxccFj_f3kW7xNmonbrpAm-TQ0sYwvnBTYwi3GZyreA/formResponse";
 
+    [System.Obsolete]
     IEnumerator Post(string name, string gender, string school, string grade)
     {
         WWWForm form = new WWWForm();
@@ -48,6 +49,7 @@ public class SendToGoogle : MonoBehaviour
         }
     }
 
+    [System.Obsolete]
     public void Send()
     {
         Name = name.GetComponent<InputField>().text;

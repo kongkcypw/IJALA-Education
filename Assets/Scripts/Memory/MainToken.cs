@@ -13,6 +13,7 @@ public class MainToken : MonoBehaviour
 
     MemScore score;
 
+
     public void Awake()
     {
         score = GameObject.FindGameObjectWithTag("Score").GetComponent<MemScore>();
@@ -44,6 +45,7 @@ public class MainToken : MonoBehaviour
             }
         }
     }
+
 
     private void DestroyColider()
     {

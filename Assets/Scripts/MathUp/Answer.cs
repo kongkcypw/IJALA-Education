@@ -42,7 +42,7 @@ public class Answer : MonoBehaviour
         if (Mathf.Abs(transform.position.x - Q_Place.position.x) <= 0.5f &&
             Mathf.Abs(transform.position.y - Q_Place.position.y) <= 0.5f)
         {
-            transform.position = new Vector2(Q_Place.position.x, Q_Place.position.y);
+            transform.position = new Vector2(Q_Place.position.x, Q_Place.position.y - 0.05f);
             locked = true;
             score.AddScore();
             DestroyColider(); // this line for fix bug(add score repeat)
