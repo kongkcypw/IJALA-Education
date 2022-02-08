@@ -12,6 +12,8 @@ public class EXpoScore : MonoBehaviour
     public int Score = 0;
     public int maxScore;
 
+    public float Countdown;
+
     public void AddScore()
     {
         Score += 1;
@@ -25,8 +27,30 @@ public class EXpoScore : MonoBehaviour
 
     public void Update()
     {
-        if(Score == maxScore)
+        if (Score != maxScore && EXpoTimer.timeout == false)
         {
+            Countdown -= Time.deltaTime;
+        }
+        else if (Score != maxScore && EXpoTimer.timeout == true)
+        {
+            ScoreBar.EXpoMemRemainingTime = 0;
+            ScoreBar.ExpoMemScore = Score;
+            Card.SetActive(false);
+            EndScreen.SetActive(true);
+        }
+
+        else if (Score == maxScore && EXpoTimer.timeout == false)
+        {
+            ScoreBar.EXpoMemRemainingTime = Countdown;
+            ScoreBar.ExpoMemScore = Score;
+            Card.SetActive(false);
+            EndScreen.SetActive(true);
+        }
+
+        else if (Score == maxScore && EXpoTimer.timeout == true)
+        {
+            ScoreBar.EXpoMemRemainingTime = 0;
+            ScoreBar.ExpoMemScore = Score;
             Card.SetActive(false);
             EndScreen.SetActive(true);
         }

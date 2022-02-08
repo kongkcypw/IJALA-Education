@@ -2141,12 +2141,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1286328002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfba24d3818445f43aa59a77831a97e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c91f097dc18101439cf28b4c6c38ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   time: 60
-  timeout: 0
-  Manager: {fileID: 0}
 --- !u!1 &1443635892
 GameObject:
   m_ObjectHideFlags: 0
@@ -2586,6 +2584,7 @@ MonoBehaviour:
   scoreText: {fileID: 294088755}
   Score: 0
   maxScore: 6
+  Countdown: 60
 --- !u!4 &1892646729
 Transform:
   m_ObjectHideFlags: 0
@@ -2821,7 +2820,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 121381521}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -2830,7 +2829,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Scene_Mode
+          m_StringArgument: Mem Mode
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2055755419
@@ -2954,7 +2953,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 121381521}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -2963,7 +2962,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Scence_MC
+          m_StringArgument: Mem Factorial
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2138915121

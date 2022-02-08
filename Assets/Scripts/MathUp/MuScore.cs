@@ -12,6 +12,8 @@ public class MuScore : MonoBehaviour
     public int Score = 0;
     public int maxScore;
 
+    public float Countdown;
+
     public void AddScore()
     {
         Score += 1;
@@ -25,8 +27,31 @@ public class MuScore : MonoBehaviour
 
     public void Update()
     {
-        if(Score == maxScore || MUTimer.timeout == true)
+        if (Score != maxScore && MUTimer.timeout == false )
         {
+            Countdown -= Time.deltaTime;
+        }
+
+        else if (Score != maxScore && MUTimer.timeout == true)
+        {
+            ScoreBar.MuRemainingTime = 0;
+            ScoreBar.MuScore = Score;
+            StartScreen.SetActive(false);
+            EndScreen.SetActive(true);
+        }
+
+        else if (Score == maxScore && MUTimer.timeout == false)
+        {
+            ScoreBar.MuRemainingTime = Countdown;
+            ScoreBar.MuScore = Score;
+            StartScreen.SetActive(false);
+            EndScreen.SetActive(true);
+        }
+
+        else if (Score == maxScore || MUTimer.timeout == true)
+        {
+            ScoreBar.MuRemainingTime = 0;
+            ScoreBar.MuScore = Score;
             StartScreen.SetActive(false);
             EndScreen.SetActive(true);
         }

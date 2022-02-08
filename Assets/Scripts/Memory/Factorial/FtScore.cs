@@ -12,6 +12,8 @@ public class FtScore : MonoBehaviour
     public int Score = 0;
     public int maxScore;
 
+    public float Countdown;
+
     public void AddScore()
     {
         Score += 1;
@@ -25,8 +27,30 @@ public class FtScore : MonoBehaviour
 
     public void Update()
     {
-        if(Score == maxScore)
+        if (Score != maxScore && FtTimer.timeout == false)
         {
+            Countdown -= Time.deltaTime;
+        }
+        else if (Score != maxScore && FtTimer.timeout == true)
+        {
+            ScoreBar.FtMemRemainingTime = 0;
+            ScoreBar.FtMemScore = Score;
+            Card.SetActive(false);
+            EndScreen.SetActive(true);
+        }
+
+        else if (Score == maxScore && FtTimer.timeout == false)
+        {
+            ScoreBar.FtMemRemainingTime = Countdown;
+            ScoreBar.FtMemScore = Score;
+            Card.SetActive(false);
+            EndScreen.SetActive(true);
+        }
+
+        else if (Score == maxScore && FtTimer.timeout == true)
+        {
+            ScoreBar.FtMemRemainingTime = 0;
+            ScoreBar.FtMemScore = Score;
             Card.SetActive(false);
             EndScreen.SetActive(true);
         }

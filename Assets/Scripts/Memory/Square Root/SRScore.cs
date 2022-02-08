@@ -12,6 +12,8 @@ public class SRScore : MonoBehaviour
     public int Score = 0;
     public int maxScore;
 
+    public float Countdown;
+
     public void AddScore()
     {
         Score += 1;
@@ -25,8 +27,30 @@ public class SRScore : MonoBehaviour
 
     public void Update()
     {
-        if(Score == maxScore)
+        if (Score != maxScore && SRTimer.timeout == false)
         {
+            Countdown -= Time.deltaTime;
+        }
+        else if (Score != maxScore && SRTimer.timeout == true)
+        {
+            ScoreBar.SRMemRemainingTime = 0;
+            ScoreBar.SRMemScore = Score;
+            Card.SetActive(false);
+            EndScreen.SetActive(true);
+        }
+
+        else if (Score == maxScore && SRTimer.timeout == false)
+        {
+            ScoreBar.SRMemRemainingTime = Countdown;
+            ScoreBar.SRMemScore = Score;
+            Card.SetActive(false);
+            EndScreen.SetActive(true);
+        }
+
+        else if (Score == maxScore && SRTimer.timeout == true)
+        {
+            ScoreBar.SRMemRemainingTime = 0;
+            ScoreBar.SRMemScore = Score;
             Card.SetActive(false);
             EndScreen.SetActive(true);
         }
