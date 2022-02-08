@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using TMPro;
 
 public class SendToGoogle : MonoBehaviour
 {
-    public GameObject name;
-    public GameObject gender;
+    public GameObject username;
+    public TMP_Dropdown gender;
     public GameObject school;
-    public GameObject grade;
+    public TMP_Dropdown grade;
 
     private string Name;
     private string Gender;
@@ -18,6 +19,7 @@ public class SendToGoogle : MonoBehaviour
 
     [SerializeField]
     private string BASE_URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdMLOqrxccFj_f3kW7xNmonbrpAm-TQ0sYwvnBTYwi3GZyreA/formResponse";
+
 
     [System.Obsolete]
     IEnumerator Post(string name, string gender, string school, string grade)
@@ -52,10 +54,20 @@ public class SendToGoogle : MonoBehaviour
     [System.Obsolete]
     public void Send()
     {
-        Name = name.GetComponent<InputField>().text;
-        Gender = gender.GetComponent<InputField>().text;
+        // Send to Google Form
+        Name = username.GetComponent<InputField>().text;
+        Gender = gender.options[gender.value].text;
         School = school.GetComponent<InputField>().text;
-        Grade = grade.GetComponent<InputField>().text;
+        Grade = grade.options[grade.value].text;
         StartCoroutine(Post(Name, Gender, School, Grade));
+
+        // Send to UserData
+        UserData.username = Name;
+        UserData.gender = Gender;
+        UserData.school = School;
+        UserData.grade = Grade;
+        UserData.Sended = true;
     }
+
+
 }

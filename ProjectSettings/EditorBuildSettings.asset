@@ -15,15 +15,36 @@ EditorBuildSettings:
     path: Assets/Scenes/Scence_MU.unity
     guid: 8d8266364a627154a8e37b09320c816d
   - enabled: 1
-    path: Assets/Scenes/Scence_MC.unity
+    path: Assets/Scenes/MC Easy.unity
     guid: 58a1f89ad42349340998aaf25513cf95
   - enabled: 1
-    path: Assets/Scenes/Scence_Mem.unity
-    guid: da419ba6b469b25448c31ba1b191c009
+    path: Assets/Scenes/MC Hard.unity
+    guid: 5a9d86fdc1855f14f8aff719e732579d
+  - enabled: 1
+    path: Assets/Scenes/MC Normal.unity
+    guid: 6d2a4d8be0deba24388583b51b425164
   - enabled: 1
     path: Assets/Scenes/EditProfile.unity
     guid: 101ff38029acd934f8662297e96a3340
   - enabled: 1
     path: Assets/Scenes/Information.unity
     guid: 1054b29951b51d6438c8c0005ccb775b
+  - enabled: 1
+    path: Assets/Scenes/Difficulty.unity
+    guid: 4b887f7321eceff48a0bfeb6096f6840
+  - enabled: 1
+    path: Assets/Scenes/ShowScore.unity
+    guid: 5a7c8bc9a6bbc0541b7c2b74db2564bd
+  - enabled: 1
+    path: Assets/Scenes/Mem Mode.unity
+    guid: c53af1287f644f943ba5bbbc9157d4d9
+  - enabled: 1
+    path: Assets/Scenes/Mem Square Root.unity
+    guid: da419ba6b469b25448c31ba1b191c009
+  - enabled: 1
+    path: Assets/Scenes/Mem Exponentiation.unity
+    guid: 4565d35723a7758439bf92cf07427bd7
+  - enabled: 1
+    path: Assets/Scenes/Mem Factorial.unity
+    guid: bf73f355a21236a44837e561a988975f
   m_configObjects: {}

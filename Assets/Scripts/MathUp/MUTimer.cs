@@ -6,8 +6,7 @@ using DentedPixel;
 public class MUTimer : MonoBehaviour
 {
     public int time;
-    public bool timeout = false;
-    public GameObject GameControl;
+    public static bool timeout = false;
 
     void Start()
     {
@@ -26,10 +25,6 @@ public class MUTimer : MonoBehaviour
             timeout = true;
         }
 
-        if (timeout == true)
-        {
-            GameControl.SetActive(true);
-        }
     }
 
     public void AnimateBar()
